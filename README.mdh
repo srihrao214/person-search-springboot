@@ -1,0 +1,47 @@
+# Person Search Application
+
+## Overview
+Spring Boot application that loads 1000 person records from a JSON file and exposes REST endpoints for sorting, filtering, aggregation and pagination.
+
+## Technologies
+- Java 17
+- Spring Boot 3.3.5
+- Jackson
+- Maven
+
+## Features
+- Load JSON data
+- Display first 50 persons
+- Sort by first name
+- Sort by birthday
+- Count persons by gender
+- Filter by gender
+- Count persons by genre
+- Filter by genre
+- Pagination
+
+## Run
+
+mvn spring-boot:run
+
+## Endpoints
+
+GET /persons
+
+GET /persons/sort/firstname
+
+GET /persons/sort/birthday
+
+GET /persons/genders
+
+GET /persons/gender/{gender}
+
+GET /persons/genres
+
+GET /persons/genre/{genre}
+
+GET /persons/page?page=0&size=50
+
+## Notes
+
+The solution loads the dataset into memory and performs filtering, sorting and aggregation using Java Streams. For larger datasets, Apache Solr could be integrated.
