@@ -22,6 +22,8 @@ Spring Boot application that loads 1000 person records from a JSON file and expo
 
 ## Run
 
+```bash
+cd demo
 mvn spring-boot:run
 
 ## Endpoints
@@ -42,6 +44,10 @@ GET /persons/genre/{genre}
 
 GET /persons/page?page=0&size=50
 
+
+And maybe change Notes slightly:
+
+```markdown
 ## Notes
 
-The solution loads the dataset into memory and performs filtering, sorting and aggregation using Java Streams. For larger datasets, Apache Solr could be integrated.
+The solution loads the dataset into memory and performs sorting, filtering, aggregation and pagination using Java Streams. For larger datasets, Apache Solr or Elasticsearch would be more scalable options.
